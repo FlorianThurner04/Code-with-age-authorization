@@ -1,0 +1,41 @@
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        double z;
+
+        String name = JOptionPane.showInputDialog("Enter your name");
+        int age = Integer.parseInt(JOptionPane.showInputDialog("Hello "+ name + ". Please tell me your age"));
+       if(age>= 18) {
+            JOptionPane.showMessageDialog(null,"Youre old enough to use this calculator");
+
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"Youre not old enough to use this calculator");
+           System.exit(0);
+       }
+
+
+        double x = Double.parseDouble(JOptionPane.showInputDialog("Please type in your x side"));
+        double y = Double.parseDouble(JOptionPane.showInputDialog("Now please tell me your y side"));
+
+        z = Math.sqrt((x*x)+(y*y));
+
+        JOptionPane.showMessageDialog(null, "Your hypotenus is " + z);
+
+        JOptionPane.showInputDialog("Press Q for quit");
+        Scanner scanner = new Scanner(System.in);
+        String response = scanner.nextLine();
+
+        if(response.equals("Q")) {
+            JOptionPane.showMessageDialog(null, "You quit the calculator");
+
+
+
+        }
+
+    }
+}
